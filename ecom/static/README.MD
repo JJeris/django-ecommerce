@@ -1,0 +1,1 @@
+This is where all the static TEMPLATE (.html, .css and .js) files are organized.

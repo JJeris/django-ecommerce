@@ -1,0 +1,48 @@
+{% extends 'base.html' %} 
+{% comment %} 
+"Extend this home.html file into the base.html file." 
+Needs to be the first tab in the template file.
+{% endcomment %}
+
+{% block content %}
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Register</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Register your account</p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+    
+        <div class="col-md-6 offset-md-3">
+            <br><br>
+                <form method="POST" action="{% url 'register' %}">
+                    {% comment %} 
+                    Cross site request forgery token.
+                    Hackers wont be able to hijack the form.
+                    {% endcomment %}
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <br>
+                    <br>
+                    <button
+                        type="submit"
+                        class="btn btn-secondary"    
+                    >
+                        Register
+                    </button>
+                </form>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

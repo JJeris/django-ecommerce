@@ -22,11 +22,11 @@ Needs to be the first tab in the template file.
             <div class="col-8">
                 <br><br>
                     <form method="POST" action="{% url 'login' %}">
-                            {% comment %} 
-                            Cross site request forgery token.
-                            Hackers wont be able to hijack the form.
-                            {% endcomment %}
-                            {% csrf_token %}
+                        {% comment %} 
+                        Cross site request forgery token.
+                        Hackers wont be able to hijack the form.
+                        {% endcomment %}
+                        {% csrf_token %}
                         <div class="mb-3">
                             <input type="text" class="form-control" name="username" placeholder="Enter Your Username">
                         </div>

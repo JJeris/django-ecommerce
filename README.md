@@ -6,7 +6,7 @@ Follows this [tutorial](https://www.youtube.com/watch?v=u6R4vBa7ZK4&list=PLCC34O
 
 Commands:
 - source virt/Scripts/activate - activate the Python VE.
-- python manage.py migrate
+- python manage.py migrate - pushes any changes made to the models.py to the database.
 - python manage.py runserver - runs the server.
 - python manage.py makemigrations - adds any changes made to the models in the store/models.py.
 
@@ -32,9 +32,10 @@ Along side that you can extend other html documents (home.html) into other docum
 
 
 Any time you create a new page in Django its 3 step process:
+- Need a url: you simply add the newly created views page to the urlpatterns list, providing a path and a name for the view.
 - Need an html page: you create it int the template directory.
 - Need a view: you define it as a function in the store/views.py file, that returns a rendered html page.
-- Need a url: you simply add the newly created views page to the urlpatterns list, providing a path and a name for the view.
+
 
 After that, simply provide a way for the user to access that file via a hyperlink.
 

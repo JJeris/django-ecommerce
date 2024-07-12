@@ -4,7 +4,7 @@
         <a class="navbar-brand" href="{% url 'home' %}">Django Ecommerce</a>
         <div>
             {% if user.is_authenticated == True %}
-                {{user.username}}
+                <span style="color: blue; font-weight: bold">{{user.username}}</span>
             {% endif %}
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>

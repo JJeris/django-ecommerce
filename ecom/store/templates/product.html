@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+{% comment %} 
+"Extend this home.html file into the base.html file." 
+Needs to be the first tab in the template file.
+{% endcomment %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{product.image.url}}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">{{product.description}}</p>
+                        <!-- Product reviews-->
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        {% if product.is_sale == True  %}
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">${{ product.price }}</span>
+                            &nbsp;
+                            ${{ product.sale_price }} 
+                        {% else %}
+                            ${{ product.price }} 
+                        {% endif %}
+
+                        <br>
+                        <a href="{% url 'home' %}" class="btn btn-secondary" >Back</a>
+                    </center>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

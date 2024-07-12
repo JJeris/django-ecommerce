@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% comment %} 
+"Extend this home.html file into the base.html file." 
+Needs to be the first tab in the template file.
+{% endcomment %}
+
+{% block content %}
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">About Django Ecommerce</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Welcome!</p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <center>
+            <div class="col-8">
+                <br><br>
+                This is an example project to show a working ecommerce website built with Django.
+                <br><br>
+            </div>
+        </center>
+    </div>
+</div>
+
+{% endblock %}

@@ -24,5 +24,18 @@ Use python manage.py makemigrations adds the changes to the database, but python
 
 You can then access the changes model fields as you would any other field: model_name.field_name.
 
-Episode #6 - .
+Episode #6 - Template.
 
+In Django you are able to template your site with separate .html files. For example, you can add the navbar.html to the top of the home.html file by simply 'importing' it there.
+
+Along side that you can extend other html documents (home.html) into other documents (base.html).
+
+
+Any time you create a new page in Django its 3 step process:
+- Need an html page: you create it int the template directory.
+- Need a view: you define it as a function in the store/views.py file, that returns a rendered html page.
+- Need a url: you simply add the newly created views page to the urlpatterns list, providing a path and a name for the view.
+
+After that, simply provide a way for the user to access that file via a hyperlink.
+
+Episode #7 - Login/Logout.

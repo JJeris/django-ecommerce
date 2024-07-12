@@ -39,3 +39,10 @@ Any time you create a new page in Django its 3 step process:
 After that, simply provide a way for the user to access that file via a hyperlink.
 
 Episode #7 - Login/Logout.
+
+You use Django provided methods for login and logout - you only need an html doc for the login, but still need view function for both the login and logout.
+
+Make sure to use the csrf_token and the POST method when making a log in form.
+
+Episode #8 - Register users.
+

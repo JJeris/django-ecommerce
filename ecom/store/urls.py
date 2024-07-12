@@ -24,4 +24,6 @@ urlpatterns = [
     path('logout/', views.logout_user, name='logout'),
     path('register/', views.register_user, name='register'),
     path('product/<int:pk>', views.product, name='product'),
+    path('category/<str:name>', views.category, name='category'), # the value name after str: doesn't matter.
+    
 ]

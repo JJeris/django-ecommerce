@@ -47,3 +47,7 @@ Make sure to use the csrf_token and the POST method when making a log in form.
 
 Episode #8 - Register users.
 
+Episode #9 - Individual products.
+
+Episode #10 - Product Category Pages.
+

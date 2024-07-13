@@ -9,6 +9,7 @@ Commands:
 - python manage.py migrate - pushes any changes made to the models.py to the database.
 - python manage.py runserver - runs the server.
 - python manage.py makemigrations - adds any changes made to the models in the store/models.py.
+- python manage.py shell - goes into the python shell.
 
 Episode #1 - .
 Episode #2 - .
@@ -50,4 +51,8 @@ Episode #8 - Register users.
 Episode #9 - Individual products.
 
 Episode #10 - Product Category Pages.
+
+Episode #11 - New app "cart".
+
+Episode #12 - User sessions.
 

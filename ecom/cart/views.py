@@ -10,8 +10,9 @@ def  cart_summary(request):
     Args:
         request (_type_): _description_
     """
-    
-    return render(request, "cart_summary.html", {})
+    cart = Cart(request)
+    cart_products = cart.get_prods() #()
+    return render(request, "cart_summary.html", {"cart_products":cart_products})
 
 def  cart_add(request):
     # Get the cart.

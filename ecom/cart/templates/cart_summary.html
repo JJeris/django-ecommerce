@@ -21,7 +21,50 @@ Needs to be the first tab in the template file.
                 <center>
                     <div class="col-8">
                         <br><br>
-                        This is an example project to show a working ecommerce website built with Django.
+                        {% if cart_products %}
+                        {% for product in cart_products  %}
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{{product.image.url}}" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <center>
+                                            <h5 class="card-title">{{product.name}}</h5>
+                                            <p class="card-text">{{product.description}}</p>
+                                            <!-- Product reviews-->
+                                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                                <div class="bi-star-fill"></div>
+                                                <div class="bi-star-fill"></div>
+                                                <div class="bi-star-fill"></div>
+                                                <div class="bi-star-fill"></div>
+                                                <div class="bi-star-fill"></div>
+                                            </div>
+                                            {% if product.is_sale == True  %}
+                                                <!-- Product price-->
+                                                <span class="text-muted text-decoration-line-through">${{ product.price }}</span>
+                                                &nbsp;
+                                                ${{ product.sale_price }} 
+                                            {% else %}
+                                                ${{ product.price }} 
+                                            {% endif %}
+                    
+                                            <br>
+                                        </center>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                        {% else %}
+                        Nothing to see!
+                        {% endif %}
+
+                         {% comment %} {{ cart_products }} {% endcomment %}
                         <br><br>
                     </div>
                 </center>

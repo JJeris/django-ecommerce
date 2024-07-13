@@ -15,7 +15,7 @@ class Cart():
         
     def add(self, product):
         """
-        _summary_
+        Adds a product to the session key.
 
         Args:
             product (_type_): _description_

@@ -15,7 +15,7 @@ class Cart():
         # Make sure cart is available on all pages on site.
         self.cart = cart
         
-    def add(self, product):
+    def add(self, product, quantity):
         """
         Adds a product to the session key.
 
@@ -23,12 +23,14 @@ class Cart():
             product (_type_): _description_
         """        
         product_id = str(product.id)
+        product_qty = str(quantity)
         
         # Have they already added it to the cart
         if product_id in self.cart:
             pass
         else:
-            self.cart[product_id] = {'price': str(product.price)}
+            # self.cart[product_id] = {'price': str(product.price)}
+            self.cart[product_id] = int(product_qty)
         
         self.session.modified = True
     
@@ -44,6 +46,10 @@ class Cart():
         
         # Returns the filtered products.
         return products
+        
+    def get_quants(self):
+        quantities = self.cart
+        return quantities
         
         
         
